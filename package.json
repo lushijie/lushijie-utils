@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "lushijie@utils",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lushijie/utils.git"
+    "url": "https://github.com/lushijie/lushijie-utils"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lushijie/utils/issues"
+    "url": "https://github.com/lushijie/lushijie-utils"
   },
-  "homepage": "https://github.com/lushijie/utils#readme",
+  "homepage": "https://github.com/lushijie/lushijie-utils#readme",
   "dependencies": {
     "uuid": "~3.1.0"
   }
