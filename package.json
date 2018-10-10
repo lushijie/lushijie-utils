@@ -1,14 +1,13 @@
 {
   "name": "@lushijie/utils",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lushijie/lushijie-utils"
+    "url": "git+https://github.com/lushijie/lushijie-utils.git"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +17,9 @@
   "homepage": "https://github.com/lushijie/lushijie-utils#readme",
   "dependencies": {
     "uuid": "~3.1.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "description": ""
 }
