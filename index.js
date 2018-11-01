@@ -106,9 +106,7 @@ exports.extend = function(target = {}, ...args) {
   return target;
 }
 
-exports.extends = function(...arg) {
-  return exports.extend(...arg);
-}
+exports.extends = exports.extend;
 
 exports.queryURL = function(url, key) {
   url = url.replace(/^[^?=]*\?/ig, '').split('#')[0];
