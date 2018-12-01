@@ -1,7 +1,7 @@
 const toString = Object.prototype.toString;
-const crypto = require('crypto');
-const uuid = require('uuid');
-const net = require('net');
+// const crypto = require('crypto');
+// const uuid = require('uuid');
+// const net = require('net');
 const {
   isArray,
   isBoolean,
@@ -12,7 +12,7 @@ const {
   isSymbol,
   isUndefined,
   isRegExp,
-  // isObject,
+  // isObject, // rewirte after for regex
   isDate,
   isError,
   isFunction,
@@ -39,9 +39,9 @@ exports.isError = isError;
 exports.isFunction = isFunction;
 exports.isPrimitive = isPrimitive;
 exports.isBuffer = isBuffer;
-exports.isIP = net.isIP;
-exports.isIPv4 = net.isIPv4;
-exports.isIPv6 = net.isIPv6;
+// exports.isIP = net.isIP;
+// exports.isIPv4 = net.isIPv4;
+// exports.isIPv6 = net.isIPv6;
 
 exports.isInt = function(value) {
   if (isNaN(value) || isString(value)) {
@@ -199,13 +199,18 @@ exports.initializeArray = function(n, value = 0){
   return Array(n).fill(value);
 }
 
-exports.md5 = function(str) {
-  return crypto.createHash('md5').update(str + '', 'utf8').digest('hex');
-},
+// exports.md5 = function(str) {
+//   return crypto.createHash('md5').update(str + '', 'utf8').digest('hex');
+// },
 
 exports.uuid = function(version) {
-  if (version === 'v1') return uuid.v1();
-  return uuid.v4();
+  // if (version === 'v1') return uuid.v1();
+  // return uuid.v4();
+
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
 }
 
 exports.interop = function(require) {
